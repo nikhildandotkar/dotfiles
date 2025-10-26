@@ -7,9 +7,13 @@ set number
 " show status bar
 set laststatus=2
 
+noremap <F10> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DNikhil -O2 -o %< % && ./%< < inp<CR>
+inoremap <F10> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DNikhil -O2 -o "%<" "%" && "./%<" < inp<CR>
 call plug#begin()
-
-
+Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
+let g:airline_powerline_fonts = 1
 Plug 'sirver/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -18,6 +22,6 @@ let g:UltiSnipsSnippetDirectories=["mycodesnippets"]
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "let g:UltiSnipsEditSplit="vertical"
-
-
 call plug#end()
+
+
