@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/workstation/.vim/mycodesnippets'
+let g:netrw_dirhist_7='/home/workstation/.vim'
+let g:netrw_dirhist_6='/home/workstation'
+let g:netrw_dirhist_5='/home/workstation/.vim'
+let g:netrw_dirhist_4='/home/workstation'
 let g:netrw_dirhist_3='/home/workstation/dotfiles/tmux'
 let g:netrw_dirhist_2='/home/workstation/.vim'
 let g:netrw_dirhist_1='/home/workstation/dotfiles/vim'
